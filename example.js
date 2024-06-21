@@ -28,3 +28,9 @@ barGroups.append("rect")
         .transition()
         .duration(800)
         .attr("width", d => xScale(d));
+
+barGroups.append("text")
+        .attr("x", d => xScale(d) + 5)
+        .attr("y", barHeight / 2)
+        .attr("dy", ".35em")
+        .text(d => d);
